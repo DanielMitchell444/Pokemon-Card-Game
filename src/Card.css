@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@font-face {
+  font-family: Pokemon;
+  src: url("../src/Fonts/PressStart2P-Regular.ttf");
+}
+
+.header{
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img{
+  height: 100px;
+  width: 100px;
+}
+
+.card{
+background-color: rgba(0,0,0,.2);
+height: 250px;
+width: 180px;
+border-radius: 5px;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.cardImage{
+  height: 100px;
+  width: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+.cardContainer{
+  height: 250px;
+  width: 180px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+ }
+.cardContainer{
+ display:  flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ flex-wrap: wrap;
+ gap: 40px;
+}
+
+
+.overlay{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.modal{
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.modalContent{
+  border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAABgQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMM8PuMAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4xLjVkR1hSAAAA5UlEQVRoQ+3MQQrDMBBD0fb+h06N/2A+MTHdTtBbKRpHn0u+UtUf6oepqinTQ1VT62kfyNgbuHcGTaYXmqbT9XXEU6vDUaZvWk/XHxtfn/KOa6YXrk2n/UGGG7K5J8NNpgc3rafBAW7I5p4MGmR6oMFrpvf8xG+ckemV0XraB+czv3RGpldG62n47PzEb5yR6ZXxmmm4IZt7MmiQ6YEGrad9IGNv4N4ZNJleaJpO19cRT60OR5m+aT1df2x8fco7rpleuDad9gcZbsjmngw3mR7ctJ4GB1T1h/phqmrK9FDV1HH6un4ss9jsFZtJkQAAAABJRU5ErkJggg==) 42 round;
+  border-style: solid;
+  border-width: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.35);
+  background-color: white;
+  color: #181010;
+  padding: 16px;
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII="),auto;
+}
+
+.askText{
+  animation: typing 0.9s steps(60, end), blink-caret 0.75s step-end infinite;
+  font-family: "Press Start 2p";
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: .05em;
+  overflow: hidden;
+}
+
+.levelOptions{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 30px;
+ margin-top: 20px;
+}
+
+.radio{
+ border: none;
+ background-color: white;
+ font-family: "Pokemon";
+ outline: none
+}
+
+.radio:target{
+  background: yellow;
+}
+
+input[type = "radio"]{
+  box-sizing: border-box;
+  padding: 0;
+}
+
+
+.options{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+label{
+  cursor: inherit;
+}
+
+.optionsButton{
+  background: initial;
+  border: 0;
+  font-family: "Pokemon";
+  margin-top: 20px;
+}
+
+button{
+  cursor: inherit;
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    white-space: nowrap;
+    width: 0;
+  }
+
+  to {
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.optionsButton:focus,
+.optionsButton:active {
+  outline: 0;
+}
+
+.optionsButton:hover::before,
+.optionButton:focus::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: 2px;
+  height: 2px;
+  font-size: 2px;
+  color: #181010;
+  box-shadow: 1em 0em 0 #181010, 2em 0em 0 #181010, 1em 1em 0 #181010,
+    2em 1em 0 #181010, 3em 1em 0 #181010, 1em 2em 0 #181010, 2em 2em 0 #181010,
+    3em 2em 0 #181010, 4em 2em 0 #181010, 1em 3em 0 #181010, 2em 3em 0 #181010,
+    3em 3em 0 #181010, 4em 3em 0 #181010, 5em 3em 0 #181010, 1em 4em 0 #181010,
+    2em 4em 0 #181010, 3em 4em 0 #181010, 4em 4em 0 #181010, 1em 5em 0 #181010,
+    2em 5em 0 #181010, 3em 5em 0 #181010, 1em 6em 0 #181010, 2em 6em 0 #181010;
+}
+
+
+.radio + span{
+  cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer
+}
+
+button{
+  border-radius: 0;
+}
+
+button{
+  cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer
+}
+
+.radio::selection{
+ background-color: yellow;
+}
+
+
+.audio2{
+  width: 400px;
+}
+
+.music{
+  width: 400px;
+  z-index: 100;
+}
+
+.text{
+  color: blue;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardName{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  padding: 8px 6px;
+  margin-top: 30px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  font-family: "Pokemon";
+
+}
+
+.cardFront{
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden
+}
+
+.finalScore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card{
+  perspective: 1000px;
+}
+
+.flipped-card-inner{
+  transition: transform 0.6s;
+  transform-style:  preserve-3d;
+}
+
+.cardFront,
+.cardBack{
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip.card-back{
+  transform: rotateY(180deg)
+}
+
+.status-gif{
+  width: 180px;
+}
+
+.cardBack{
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.stats{
+  color: #292727;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+p{
+  margin-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.logoButton{
+  display: flex;
+  font-size: 24px;
+  letter-spacing: -.03em;
+  margin-bottom: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: initial;
+  border: none
+}
+
+.pokeBalls{
+  margin-bottom: 4px;
+}
+
+button{
+  outline: none;
+}
+
+.poke{
+  color:#ff1616
+}
+
+.memo{
+  color: #fff
+}
+
+.back{
+  backface-visibility: hidden;
+}
+
+.pokemon {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.pokemon p {
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  border-radius: 24px;
+}
+
+.ball {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50%);
+  border-radius: 50%;
+  border: 8px solid black;
+  animation: spin 1s linear infinite;
+  box-sizing: content-box;
+}
+
+.ball::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 100px;
+  background: black;
+  top: 50px;
+  transform: translateY(-50%);
+}
+
+.ball::after {
+  content: "";
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background: white;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white,
+    inset 0 0 0 12px black;
+}
+
+/* Spin Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card:focus{
+  outline: 0;
+}
+
+.cardContainer{
+  perspective: 1000px;
+}
+
+.cardInner{
+  position: relative;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.85s;
+  animation: flip-card 0.85
+}
